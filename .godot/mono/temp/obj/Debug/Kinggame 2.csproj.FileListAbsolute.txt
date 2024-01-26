@@ -32,3 +32,4 @@ C:\Users\todor\Documents\gamejam2024\kinggame2\.godot\mono\temp\obj\Debug\refint
 C:\Users\todor\Documents\gamejam2024\kinggame2\.godot\mono\temp\obj\Debug\Kinggame 2.pdb
 C:\Users\todor\Documents\gamejam2024\kinggame2\.godot\mono\temp\obj\Debug\Kinggame 2.genruntimeconfig.cache
 C:\Users\todor\Documents\gamejam2024\kinggame2\.godot\mono\temp\obj\Debug\ref\Kinggame 2.dll
+C:\Users\todor\Documents\gamejam2024\kinggame2\.godot\mono\temp\obj\Debug\Kinggame 2.sourcelink.json

@@ -28,10 +28,6 @@ public partial class CharacterBody2D : Godot.CharacterBody2D
 		if (Input.IsActionPressed("Up"))
 			velocity.Y -= speed;
 
-		if (velocity.Length() > 0)
-		{
-			velocity = velocity.Normalized() * speed;
-		}
 		velocity = velocity.Normalized() * speed;
 		Position += velocity * (float)delta;
 		Position = new Vector2(
