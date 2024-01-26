@@ -1,0 +1,4 @@
+res://default_env.tres
+res://WorldNode.tscn
+res://testnode.cs
+res://CharacterBody2D.cs

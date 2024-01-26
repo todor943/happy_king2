@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "s+cZAlYV12vf+DTQAhT65UELuMvYVIUnPpuTveKTSHDpWlAKRz6upAobOFExo2iX2SDB18Hkjt+bOJ/qfmSfCg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\todor\\Documents\\gamejam2024\\kinggame2\\Kinggame 2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\todor\\.nuget\\packages\\godot.sourcegenerators\\4.2.1\\godot.sourcegenerators.4.2.1.nupkg.sha512",
+    "C:\\Users\\todor\\.nuget\\packages\\godotsharp\\4.2.1\\godotsharp.4.2.1.nupkg.sha512",
+    "C:\\Users\\todor\\.nuget\\packages\\godotsharpeditor\\4.2.1\\godotsharpeditor.4.2.1.nupkg.sha512",
+    "C:\\Users\\todor\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.26\\microsoft.netcore.app.ref.6.0.26.nupkg.sha512",
+    "C:\\Users\\todor\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.26\\microsoft.windowsdesktop.app.ref.6.0.26.nupkg.sha512",
+    "C:\\Users\\todor\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.26\\microsoft.aspnetcore.app.ref.6.0.26.nupkg.sha512"
+  ],
+  "logs": []
+}

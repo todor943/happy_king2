@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cgrppp2qryyna"]
+
+[ext_resource type="Script" path="res://testnode.cs" id="1"]
+[ext_resource type="Texture2D" uid="uid://d2b3drhjf41r" path="res://Sprites/putin_head.jpeg" id="2_crdbt"]
+[ext_resource type="Script" path="res://CharacterBody2D.cs" id="2_uydtx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bjnv8"]
+size = Vector2(153, 120)
+
+[node name="WorldNode" type="Node"]
+
+[node name="testnode" type="Node2D" parent="."]
+script = ExtResource("1")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("2_uydtx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(81.5, 62)
+shape = SubResource("RectangleShape2D_bjnv8")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(78.25, 59.75)
+scale = Vector2(0.182971, 0.185385)
+texture = ExtResource("2_crdbt")

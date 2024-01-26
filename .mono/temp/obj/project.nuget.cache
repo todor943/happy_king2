@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "wig3Smpx/6XYkVyizZjgBGq8aKDRXWcWbTUvEjniV4fqs1x6fFICuDRKDqSDkjlWjsjFPP61KhICOAE00soExA==",
+  "success": true,
+  "projectFilePath": "D:\\Global Game Jam 2024\\kinggame2\\Kinggame 2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\theborg\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.3\\microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
+    "C:\\Users\\theborg\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net472\\1.0.3\\microsoft.netframework.referenceassemblies.net472.1.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
