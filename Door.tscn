@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=3 uid="uid://d0wjm7is1wwbd"]
+
+[ext_resource type="Script" path="res://Scripts/DoorSprite2D.cs" id="2_1xg7s"]
+[ext_resource type="Texture2D" uid="uid://d4imsilu7jbka" path="res://Sprites/Tiles/door.png" id="2_ymrlm"]
+
+[sub_resource type="CSharpScript" id="CSharpScript_4axal"]
+script/source = "using Godot;
+using System;
+
+public partial class DoorNode : Node2D
+{
+	bool isOpen= false;
+	Area2D doorcollision = GetNode<Area2D>(\"Area2D\");
+
+	// Called when the node enters the scene tree for the first time.
+	public override void _Ready()
+	{
+
+	}
+
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
+	{
+
+
+	}
+}
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wodjt"]
+size = Vector2(61.5, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w6ogl"]
+size = Vector2(61, 47)
+
+[node name="DoorNode" type="Node2D"]
+script = SubResource("CSharpScript_4axal")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ymrlm")
+hframes = 2
+script = ExtResource("2_1xg7s")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 10)
+shape = SubResource("RectangleShape2D_wodjt")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Area2D"]
+
+[node name="DoorBlock2D" type="CollisionShape2D" parent="Area2D/StaticBody2D"]
+unique_name_in_owner = true
+position = Vector2(-0.5, 12.5)
+shape = SubResource("RectangleShape2D_w6ogl")
+
+[connection signal="body_entered" from="Area2D" to="Sprite2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Sprite2D" method="_on_area_2d_body_exited"]
