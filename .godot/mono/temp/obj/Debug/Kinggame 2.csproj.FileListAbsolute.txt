@@ -33,3 +33,21 @@ C:\Users\todor\Documents\gamejam2024\kinggame2\.godot\mono\temp\obj\Debug\Kingga
 C:\Users\todor\Documents\gamejam2024\kinggame2\.godot\mono\temp\obj\Debug\Kinggame 2.genruntimeconfig.cache
 C:\Users\todor\Documents\gamejam2024\kinggame2\.godot\mono\temp\obj\Debug\ref\Kinggame 2.dll
 C:\Users\todor\Documents\gamejam2024\kinggame2\.godot\mono\temp\obj\Debug\Kinggame 2.sourcelink.json
+D:\Global Game Jam 2024\happy_king2\.godot\mono\temp\bin\Debug\Kinggame 2.deps.json
+D:\Global Game Jam 2024\happy_king2\.godot\mono\temp\bin\Debug\Kinggame 2.runtimeconfig.json
+D:\Global Game Jam 2024\happy_king2\.godot\mono\temp\bin\Debug\Kinggame 2.dll
+D:\Global Game Jam 2024\happy_king2\.godot\mono\temp\bin\Debug\Kinggame 2.pdb
+D:\Global Game Jam 2024\happy_king2\.godot\mono\temp\bin\Debug\GodotSharp.dll
+D:\Global Game Jam 2024\happy_king2\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+D:\Global Game Jam 2024\happy_king2\.godot\mono\temp\obj\Debug\Kinggame 2.csproj.AssemblyReference.cache
+D:\Global Game Jam 2024\happy_king2\.godot\mono\temp\obj\Debug\Kinggame 2.GeneratedMSBuildEditorConfig.editorconfig
+D:\Global Game Jam 2024\happy_king2\.godot\mono\temp\obj\Debug\Kinggame 2.AssemblyInfoInputs.cache
+D:\Global Game Jam 2024\happy_king2\.godot\mono\temp\obj\Debug\Kinggame 2.AssemblyInfo.cs
+D:\Global Game Jam 2024\happy_king2\.godot\mono\temp\obj\Debug\Kinggame 2.csproj.CoreCompileInputs.cache
+D:\Global Game Jam 2024\happy_king2\.godot\mono\temp\obj\Debug\Kinggame 2.sourcelink.json
+D:\Global Game Jam 2024\happy_king2\.godot\mono\temp\obj\Debug\Kinggame 2.csproj.CopyComplete
+D:\Global Game Jam 2024\happy_king2\.godot\mono\temp\obj\Debug\Kinggame 2.dll
+D:\Global Game Jam 2024\happy_king2\.godot\mono\temp\obj\Debug\refint\Kinggame 2.dll
+D:\Global Game Jam 2024\happy_king2\.godot\mono\temp\obj\Debug\Kinggame 2.pdb
+D:\Global Game Jam 2024\happy_king2\.godot\mono\temp\obj\Debug\Kinggame 2.genruntimeconfig.cache
+D:\Global Game Jam 2024\happy_king2\.godot\mono\temp\obj\Debug\ref\Kinggame 2.dll
