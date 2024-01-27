@@ -1,6 +1,46 @@
-[gd_scene load_steps=2 format=3 uid="uid://c4vff6xg28e5t"]
+[gd_scene load_steps=7 format=3 uid="uid://c4vff6xg28e5t"]
 
 [ext_resource type="Script" path="res://Scripts/MainMenu.cs" id="1_2x8e0"]
+[ext_resource type="Texture2D" uid="uid://djocq5n364qeh" path="res://Sprites/king asset.png" id="2_k4add"]
+[ext_resource type="Texture2D" uid="uid://cr05sw1yykuf7" path="res://Sprites/banana_peel.png" id="3_1e2wm"]
+
+[sub_resource type="Animation" id="Animation_g82rt"]
+resource_name = "tongue"
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("KingSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_d5xv4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("KingSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xew6u"]
+_data = {
+"RESET": SubResource("Animation_d5xv4"),
+"tongue": SubResource("Animation_g82rt")
+}
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -16,7 +56,7 @@ layout_mode = 0
 offset_left = 179.0
 offset_top = 498.0
 offset_right = 439.0
-offset_bottom = 585.0
+offset_bottom = 638.0
 theme_override_font_sizes/font_size = 96
 text = "Play
 "
@@ -30,6 +70,23 @@ offset_bottom = 634.0
 theme_override_font_sizes/font_size = 96
 text = "Exit
 "
+
+[node name="KingSprite" type="Sprite2D" parent="."]
+position = Vector2(1007, 218)
+scale = Vector2(4.25781, 3.88715)
+texture = ExtResource("2_k4add")
+hframes = 2
+vframes = 2
+
+[node name="KingAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xew6u")
+}
+
+[node name="BananaSprite" type="Sprite2D" parent="."]
+position = Vector2(338, 480)
+scale = Vector2(0.191176, 0.191176)
+texture = ExtResource("3_1e2wm")
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
