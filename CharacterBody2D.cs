@@ -33,7 +33,6 @@ public partial class CharacterBody2D : Godot.CharacterBody2D
 
 		);
 
-		// update_animation_direction(direction);
 
 		if(direction != Vector2.Zero) {
 			if (Input.IsActionPressed("Right")) {
@@ -55,10 +54,6 @@ public partial class CharacterBody2D : Godot.CharacterBody2D
 
 			velocity = velocity.Normalized() * speed;
 			Position += velocity * (float)delta;
-			Position = new Vector2(
-				x: Mathf.Clamp(Position.X, 0, ScreenSize.X - 64),
-				y: Mathf.Clamp(Position.Y, 0, ScreenSize.Y - 64)
-			);
 			MoveAndSlide();
 		}
 		else {
