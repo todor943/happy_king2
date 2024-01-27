@@ -88,19 +88,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\todor\\.nuget\\packages\\": {}
+    "C:\\Users\\theborg\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\todor\\Documents\\gamejam2024\\kinggame2\\Kinggame 2.csproj",
+      "projectUniqueName": "D:\\Global Game Jam 2024\\happy_king2\\Kinggame 2.csproj",
       "projectName": "Kinggame 2",
-      "projectPath": "C:\\Users\\todor\\Documents\\gamejam2024\\kinggame2\\Kinggame 2.csproj",
-      "packagesPath": "C:\\Users\\todor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\todor\\Documents\\gamejam2024\\kinggame2\\.godot\\mono\\temp\\obj\\",
+      "projectPath": "D:\\Global Game Jam 2024\\happy_king2\\Kinggame 2.csproj",
+      "packagesPath": "C:\\Users\\theborg\\.nuget\\packages\\",
+      "outputPath": "D:\\Global Game Jam 2024\\happy_king2\\.godot\\mono\\temp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\todor\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\theborg\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"

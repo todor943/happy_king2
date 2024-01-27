@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Kinggame 2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5bcf80ff629fd19c7d09f15e5b141e8c5562b950")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bfca3396d96d31f4981b64ccb4547b8d9d61030e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Kinggame 2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Kinggame 2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
