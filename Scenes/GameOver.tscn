@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://5jsqo13sjj5v"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 828.0
+offset_top = 435.0
+offset_right = 1198.0
+offset_bottom = 637.0
+theme_override_font_sizes/font_size = 64
+text = "Exit
+"
+
+[node name="Retry" type="Button" parent="."]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 430.0
+offset_right = 604.0
+offset_bottom = 643.0
+theme_override_font_sizes/font_size = 64
+text = "Try again"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 378.0
+offset_top = 146.0
+offset_right = 1050.0
+offset_bottom = 307.0
+theme_override_font_sizes/normal_font_size = 96
+text = "GAME OVER
+"
