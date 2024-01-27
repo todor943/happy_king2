@@ -8,6 +8,12 @@ public partial class CharacterBody2D : Godot.CharacterBody2D
 	public float speed = 400f;
 
 	[Export]
+	public bool hasKey = true;
+	[Export]
+
+	public bool isPlayer = true;
+
+	[Export]
 	public Vector2 direction;
 
 	public Vector2 ScreenSize; // Size of the game window.
