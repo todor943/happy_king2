@@ -4,6 +4,21 @@
 [ext_resource type="Texture2D" uid="uid://djocq5n364qeh" path="res://Sprites/king asset.png" id="2_k4add"]
 [ext_resource type="Texture2D" uid="uid://cr05sw1yykuf7" path="res://Sprites/banana_peel.png" id="3_1e2wm"]
 
+[sub_resource type="Animation" id="Animation_d5xv4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("KingSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
 [sub_resource type="Animation" id="Animation_g82rt"]
 resource_name = "tongue"
 loop_mode = 1
@@ -19,21 +34,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3]
-}
-
-[sub_resource type="Animation" id="Animation_d5xv4"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("KingSprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xew6u"]
@@ -87,6 +87,25 @@ libraries = {
 position = Vector2(338, 480)
 scale = Vector2(0.191176, 0.191176)
 texture = ExtResource("3_1e2wm")
+
+[node name="Description" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 277.0
+offset_right = 697.0
+offset_bottom = 402.0
+theme_override_font_sizes/normal_font_size = 36
+text = "Keep the king happy, go ride the dragon to your escape. OR DIE.
+"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 215.0
+offset_top = 68.0
+offset_right = 799.0
+offset_bottom = 204.0
+theme_override_font_sizes/normal_font_size = 96
+text = "Happy King"
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
