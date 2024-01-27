@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cgrppp2qryyna"]
+[gd_scene load_steps=30 format=3 uid="uid://cgrppp2qryyna"]
 
 [ext_resource type="Script" path="res://CharacterBody2D.cs" id="2_uydtx"]
 [ext_resource type="Texture2D" uid="uid://camix3qqvld57" path="res://Sprites/Character Asset.png" id="2_yqcbj"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://d0fbrxgboxbl5" path="res://Sprites/dragon sprite.png" id="7_x0o7e"]
 [ext_resource type="Script" path="res://Scripts/GuardNode2D.cs" id="8_6orxh"]
 [ext_resource type="Texture2D" uid="uid://de212ubvfg23f" path="res://Sprites/Guard Sprite.png" id="8_7rrb2"]
+[ext_resource type="Texture2D" uid="uid://bp38585vqlwt7" path="res://Sprites/Text Bubble2.png" id="10_8p68n"]
 [ext_resource type="PackedScene" uid="uid://d0wjm7is1wwbd" path="res://Door.tscn" id="10_mix1n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bjnv8"]
@@ -198,9 +199,37 @@ _data = {
 "standing": SubResource("Animation_pk0hj")
 }
 
+[sub_resource type="Animation" id="Animation_exikd"]
+resource_name = "say"
+length = 1.1
+step = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpeechSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 4, 8, 5]
+}
+
+[sub_resource type="Animation" id="Animation_fc2dq"]
+length = 1.2
+step = 0.4
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jok5l"]
+_data = {
+"RESET": SubResource("Animation_fc2dq"),
+"say": SubResource("Animation_exikd")
+}
+
 [node name="WorldNode" type="Node"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(-301, -15)
 disable_mode = 2
 platform_wall_layers = 1
 script = ExtResource("2_uydtx")
@@ -260,10 +289,11 @@ scale = Vector2(2.16146, 1.98008)
 texture = ExtResource("7_x0o7e")
 
 [node name="GuardNode2D" type="Node2D" parent="."]
+position = Vector2(222, 0)
 script = ExtResource("8_6orxh")
 
 [node name="GuardSprite" type="Sprite2D" parent="GuardNode2D"]
-position = Vector2(-340, 178)
+position = Vector2(-109, 152)
 texture = ExtResource("8_7rrb2")
 hframes = 3
 vframes = 2
@@ -274,8 +304,21 @@ libraries = {
 "": SubResource("AnimationLibrary_86hhh")
 }
 
+[node name="SpeechSprite" type="Sprite2D" parent="GuardNode2D"]
+position = Vector2(-305.492, 129.247)
+scale = Vector2(3.82916, 4.46573)
+texture = ExtResource("10_8p68n")
+hframes = 4
+vframes = 3
+frame = 5
+
+[node name="SpeechAnimation" type="AnimationPlayer" parent="GuardNode2D"]
+libraries = {
+"": SubResource("AnimationLibrary_jok5l")
+}
+
 [node name="UpperBanana" parent="." instance=ExtResource("4_nqsrm")]
-position = Vector2(520, 73)
+position = Vector2(545, 132)
 
 [node name="RightBanana" parent="." instance=ExtResource("4_nqsrm")]
 position = Vector2(968, 535)

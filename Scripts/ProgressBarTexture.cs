@@ -17,6 +17,7 @@ public partial class ProgressBarTexture : TextureProgressBar
 			GD.Print("u died!");
 			isDead = true;
 			// change scene to game over
+			GetTree().ChangeSceneToFile("res://Scenes/GameOver.tscn");
 		}
 	}
 

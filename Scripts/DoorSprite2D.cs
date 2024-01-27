@@ -29,17 +29,6 @@ public partial class DoorSprite2D : Sprite2D
 	private void _on_body_entered(Node2D body)
 	{
 		isOpen = true;
-		// var hasKey = (bool) body.Get("hasKey");
-		// var isPlayer = (bool) body.Get("isPlayer");
-		// if(isPlayer) {
-		// 	GD.Print(hasKey);
-		// 	if(hasKey) {
-		// 		isOpen = true;
-		// 	}
-		// 	else {
-		// 		GD.Print("NO KEY");
-		// 	}
-		// }
 		
 	}
 	
