@@ -31,8 +31,10 @@ public partial class CharacterBody2D : Godot.CharacterBody2D
 		velocity = velocity.Normalized() * speed;
 		Position += velocity * (float)delta;
 		Position = new Vector2(
-			x: Mathf.Clamp(Position.X, 0, ScreenSize.X),
-			y: Mathf.Clamp(Position.Y, 0, ScreenSize.Y)
+			x: Mathf.Clamp(Position.X, 0, ScreenSize.X -65),
+			y: Mathf.Clamp(Position.Y, 0, ScreenSize.Y -65)
 		);
+		MoveAndSlide();
 	}
+	
 }
