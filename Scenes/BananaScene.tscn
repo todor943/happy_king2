@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://tysm5e4heicr"]
+
+[ext_resource type="Script" path="res://Scripts/BananaArea2D.cs" id="1_d8uj3"]
+[ext_resource type="Texture2D" uid="uid://cr05sw1yykuf7" path="res://Sprites/banana_peel.png" id="2_rrmxv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pcn82"]
+size = Vector2(123.25, 105.5)
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_d8uj3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(64, 56)
+shape = SubResource("RectangleShape2D_pcn82")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+position = Vector2(-1.90735e-06, -1.90735e-06)
+scale = Vector2(0.099734, 0.157393)
+texture = ExtResource("2_rrmxv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
