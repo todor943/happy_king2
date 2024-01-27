@@ -120,6 +120,14 @@ _data = {
 "walk_up": SubResource("Animation_tft70")
 }
 
+[sub_resource type="Gradient" id="Gradient_hxe6v"]
+offsets = PackedFloat32Array(0, 0.17316)
+colors = PackedColorArray(0, 0, 0, 1, 0, 1, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cq7hu"]
+gradient = SubResource("Gradient_hxe6v")
+height = 32
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aij1b"]
 texture = ExtResource("4_muva8")
 texture_region_size = Vector2i(64, 64)
@@ -146,14 +154,6 @@ texture_region_size = Vector2i(64, 64)
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_aij1b")
-
-[sub_resource type="Gradient" id="Gradient_hxe6v"]
-offsets = PackedFloat32Array(0, 0.17316)
-colors = PackedColorArray(0, 0, 0, 1, 0, 1, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_cq7hu"]
-gradient = SubResource("Gradient_hxe6v")
-height = 32
 
 [node name="WorldNode" type="Node"]
 
@@ -183,6 +183,19 @@ frame = 4
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CharacterBody2D/Camera2D"]
+z_index = 5
+offset_left = 225.0
+offset_top = -298.0
+offset_right = 385.0
+offset_bottom = -266.0
+value = 100.0
+texture_progress = SubResource("GradientTexture2D_cq7hu")
+script = ExtResource("5_usx05")
+
+[node name="Timer" type="Timer" parent="CharacterBody2D/Camera2D/TextureProgressBar"]
+autostart = true
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_8ssi5")
 format = 2
@@ -191,18 +204,6 @@ layer_0/tile_data = PackedInt32Array(131077, 0, 0, 196613, 0, 0, 196612, 0, 0, 2
 [node name="Area2D" parent="." instance=ExtResource("4_nqsrm")]
 position = Vector2(40, 446)
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
-offset_left = 579.0
-offset_top = 33.0
-offset_right = 739.0
-offset_bottom = 65.0
-value = 100.0
-texture_progress = SubResource("GradientTexture2D_cq7hu")
-script = ExtResource("5_usx05")
-
-[node name="Timer" type="Timer" parent="TextureProgressBar"]
-autostart = true
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(346, -57)
 scale = Vector2(1.92188, 1.92188)
@@ -210,5 +211,5 @@ texture = ExtResource("6_86vqs")
 hframes = 2
 vframes = 2
 
-[connection signal="body_entered" from="Area2D" to="TextureProgressBar" method="_on_area_2d_body_entered"]
-[connection signal="timeout" from="TextureProgressBar/Timer" to="TextureProgressBar" method="_on_timer_timeout"]
+[connection signal="timeout" from="CharacterBody2D/Camera2D/TextureProgressBar/Timer" to="CharacterBody2D/Camera2D/TextureProgressBar" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="CharacterBody2D/Camera2D/TextureProgressBar" method="_on_area_2d_body_entered"]
