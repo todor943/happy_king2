@@ -30,6 +30,9 @@ public partial class ProgressBarTexture : TextureProgressBar
 	{
 		// Replace with function body.
 		Value = Value + 20;
+		AudioStreamPlayer stream_player = GetNode<AudioStreamPlayer>("%BananaSlipPlayer");
+		stream_player.Play();
+		// play sound
 	}
 }
 

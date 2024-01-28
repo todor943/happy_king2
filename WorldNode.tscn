@@ -1,9 +1,10 @@
-[gd_scene load_steps=30 format=3 uid="uid://cgrppp2qryyna"]
+[gd_scene load_steps=31 format=3 uid="uid://cgrppp2qryyna"]
 
 [ext_resource type="Script" path="res://CharacterBody2D.cs" id="2_uydtx"]
 [ext_resource type="Texture2D" uid="uid://camix3qqvld57" path="res://Sprites/Character Asset.png" id="2_yqcbj"]
 [ext_resource type="Texture2D" uid="uid://yy4jnlblma4b" path="res://Sprites/Tiles/TileAtlas1.png" id="4_muva8"]
 [ext_resource type="PackedScene" uid="uid://tysm5e4heicr" path="res://Scenes/BananaScene.tscn" id="4_nqsrm"]
+[ext_resource type="AudioStream" uid="uid://bn2pohlxs5r8n" path="res://Sounds/banana_slip_cut.mp3" id="4_wpcls"]
 [ext_resource type="Script" path="res://Scripts/ProgressBarTexture.cs" id="5_usx05"]
 [ext_resource type="Texture2D" uid="uid://djocq5n364qeh" path="res://Sprites/king asset.png" id="6_86vqs"]
 [ext_resource type="Texture2D" uid="uid://d0fbrxgboxbl5" path="res://Sprites/dragon sprite.png" id="7_x0o7e"]
@@ -199,6 +200,10 @@ _data = {
 "standing": SubResource("Animation_pk0hj")
 }
 
+[sub_resource type="Animation" id="Animation_fc2dq"]
+length = 1.2
+step = 0.4
+
 [sub_resource type="Animation" id="Animation_exikd"]
 resource_name = "say"
 length = 1.1
@@ -215,10 +220,6 @@ tracks/0/keys = {
 "update": 1,
 "values": [0, 4, 8, 5]
 }
-
-[sub_resource type="Animation" id="Animation_fc2dq"]
-length = 1.2
-step = 0.4
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jok5l"]
 _data = {
@@ -279,6 +280,10 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 21
 text = "Laughter
 "
+
+[node name="BananaSlipPlayer" type="AudioStreamPlayer" parent="CharacterBody2D/Camera2D"]
+unique_name_in_owner = true
+stream = ExtResource("4_wpcls")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_8ssi5")
