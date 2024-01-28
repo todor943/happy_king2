@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://c4vff6xg28e5t"]
+[gd_scene load_steps=9 format=3 uid="uid://c4vff6xg28e5t"]
 
 [ext_resource type="Script" path="res://Scripts/MainMenu.cs" id="1_2x8e0"]
 [ext_resource type="Texture2D" uid="uid://djocq5n364qeh" path="res://Sprites/king asset.png" id="2_k4add"]
 [ext_resource type="Texture2D" uid="uid://cr05sw1yykuf7" path="res://Sprites/banana_peel.png" id="3_1e2wm"]
 [ext_resource type="AudioStream" uid="uid://ct3sjf1uurdfm" path="res://Sounds/cancan-15542.mp3" id="4_12u7i"]
+[ext_resource type="Texture2D" uid="uid://b12bvsmq6p035" path="res://Sprites/menu_background.png" id="5_2k0c8"]
 
 [sub_resource type="Animation" id="Animation_d5xv4"]
 length = 0.001
@@ -54,10 +55,10 @@ script = ExtResource("1_2x8e0")
 
 [node name="Play" type="Button" parent="."]
 layout_mode = 0
-offset_left = 179.0
-offset_top = 498.0
-offset_right = 439.0
-offset_bottom = 638.0
+offset_left = 207.0
+offset_top = 560.0
+offset_right = 467.0
+offset_bottom = 700.0
 theme_override_font_sizes/font_size = 96
 text = "Play
 "
@@ -65,16 +66,16 @@ text = "Play
 [node name="Exit" type="Button" parent="."]
 layout_mode = 0
 offset_left = 735.0
-offset_top = 494.0
+offset_top = 562.0
 offset_right = 984.0
-offset_bottom = 634.0
+offset_bottom = 702.0
 theme_override_font_sizes/font_size = 96
 text = "Exit
 "
 
 [node name="KingSprite" type="Sprite2D" parent="."]
-position = Vector2(1007, 218)
-scale = Vector2(4.25781, 3.88715)
+position = Vector2(932.875, 177.906)
+scale = Vector2(3.3164, 2.99505)
 texture = ExtResource("2_k4add")
 hframes = 2
 vframes = 2
@@ -85,21 +86,26 @@ libraries = {
 }
 
 [node name="BananaSprite" type="Sprite2D" parent="."]
-position = Vector2(338, 480)
+position = Vector2(338, 532)
 scale = Vector2(0.191176, 0.191176)
 texture = ExtResource("3_1e2wm")
 
 [node name="Description" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 102.0
-offset_top = 277.0
-offset_right = 697.0
-offset_bottom = 402.0
+offset_left = 682.0
+offset_top = 369.0
+offset_right = 1277.0
+offset_bottom = 494.0
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 36
-text = "Keep the king happy, go ride the dragon to your escape. OR DIE.
-"
+bbcode_enabled = true
+text = "[color=#000000]Keep the king happy, go ride the dragon to your escape. OR DIE.
+[/color]"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 215.0
 offset_top = 68.0
@@ -111,6 +117,12 @@ text = "Happy King"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_12u7i")
 autoplay = true
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(636, 361)
+scale = Vector2(0.989822, 0.979426)
+texture = ExtResource("5_2k0c8")
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

@@ -334,7 +334,7 @@ texture_progress = SubResource("GradientTexture2D_cq7hu")
 script = ExtResource("5_usx05")
 
 [node name="Timer" type="Timer" parent="CharacterBody2D/Camera2D/TextureProgressBar"]
-wait_time = 0.5
+wait_time = 0.55
 autostart = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CharacterBody2D/Camera2D"]

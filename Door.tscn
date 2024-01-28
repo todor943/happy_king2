@@ -28,7 +28,7 @@ public partial class DoorNode : Node2D
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wodjt"]
-size = Vector2(61.5, 128)
+size = Vector2(61.5, 100)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w6ogl"]
 size = Vector2(61, 47)
@@ -44,7 +44,7 @@ script = ExtResource("2_1xg7s")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 10)
+position = Vector2(0, -7)
 shape = SubResource("RectangleShape2D_wodjt")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Area2D"]

@@ -19,6 +19,7 @@ public partial class DoorSprite2D : Sprite2D
 		if(isOpen) {
 			Frame = 1;
 			blockedNode.Disabled = true;
+			//GetTree().ChangeSceneToFile("res://Scenes/Win.tscn");
 		}
 		else {
 			Frame = 0;
@@ -28,6 +29,7 @@ public partial class DoorSprite2D : Sprite2D
 	
 	private void _on_body_entered(Node2D body)
 	{
+		
 		isOpen = true;
 		
 	}
