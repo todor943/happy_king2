@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://cgrppp2qryyna"]
+[gd_scene load_steps=36 format=3 uid="uid://cgrppp2qryyna"]
 
 [ext_resource type="Texture2D" uid="uid://ctc8sh3g0vtlr" path="res://Sprites/Banana Fall sprites actio2n.png" id="2_i84bj"]
 [ext_resource type="Script" path="res://CharacterBody2D.cs" id="2_uydtx"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://bp38585vqlwt7" path="res://Sprites/Text Bubble2.png" id="10_8p68n"]
 [ext_resource type="PackedScene" uid="uid://d0wjm7is1wwbd" path="res://Door.tscn" id="10_mix1n"]
 [ext_resource type="AudioStream" uid="uid://bks4ef3myrm66" path="res://Sounds/vodevil-15550.mp3" id="13_mu4bu"]
+[ext_resource type="Script" path="res://Scripts/DragonLairEntered.cs" id="15_ohx85"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bjnv8"]
 size = Vector2(40, 23)
@@ -294,6 +295,9 @@ _data = {
 "say": SubResource("Animation_exikd")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xmkhq"]
+size = Vector2(260, 188)
+
 [node name="WorldNode" type="Node"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
@@ -432,8 +436,16 @@ position = Vector2(800, 462)
 stream = ExtResource("13_mu4bu")
 autoplay = true
 
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("15_ohx85")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(834, 346)
+shape = SubResource("RectangleShape2D_xmkhq")
+
 [connection signal="timeout" from="CharacterBody2D/Camera2D/TextureProgressBar/Timer" to="CharacterBody2D/Camera2D/TextureProgressBar" method="_on_timer_timeout"]
 [connection signal="body_entered" from="FirstBanana" to="CharacterBody2D/Camera2D/TextureProgressBar" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="UpperBanana" to="CharacterBody2D/Camera2D/TextureProgressBar" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="RightBanana" to="CharacterBody2D/Camera2D/TextureProgressBar" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="SecondBanana" to="CharacterBody2D/Camera2D/TextureProgressBar" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

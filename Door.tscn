@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://d0wjm7is1wwbd"]
+[gd_scene load_steps=7 format=3 uid="uid://d0wjm7is1wwbd"]
 
 [ext_resource type="Script" path="res://Scripts/DoorSprite2D.cs" id="2_1xg7s"]
 [ext_resource type="Texture2D" uid="uid://d4imsilu7jbka" path="res://Sprites/Tiles/door.png" id="2_ymrlm"]
+[ext_resource type="VideoStream" path="res://Video/Flying-Dragon-FINAL.ogv" id="3_i3afj"]
 
 [sub_resource type="CSharpScript" id="CSharpScript_4axal"]
 script/source = "using Godot;
@@ -53,6 +54,12 @@ shape = SubResource("RectangleShape2D_wodjt")
 unique_name_in_owner = true
 position = Vector2(-0.5, 12.5)
 shape = SubResource("RectangleShape2D_w6ogl")
+
+[node name="EndVideo" type="VideoStreamPlayer" parent="."]
+unique_name_in_owner = true
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("3_i3afj")
 
 [connection signal="body_entered" from="Area2D" to="Sprite2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Sprite2D" method="_on_area_2d_body_exited"]
