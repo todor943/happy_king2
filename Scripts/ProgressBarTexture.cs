@@ -29,7 +29,7 @@ public partial class ProgressBarTexture : TextureProgressBar
 	private void _on_area_2d_body_entered(Node2D body)
 	{
 		// Replace with function body.
-		Value = Value + 20;
+		Value = Value + 15;
 		AudioStreamPlayer stream_player = GetNode<AudioStreamPlayer>("%BananaSlipPlayer");
 		stream_player.Play();
 		// play sound
