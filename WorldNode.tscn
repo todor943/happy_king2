@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cgrppp2qryyna"]
+[gd_scene load_steps=32 format=3 uid="uid://cgrppp2qryyna"]
 
 [ext_resource type="Script" path="res://CharacterBody2D.cs" id="2_uydtx"]
 [ext_resource type="Texture2D" uid="uid://camix3qqvld57" path="res://Sprites/Character Asset.png" id="2_yqcbj"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://de212ubvfg23f" path="res://Sprites/Guard Sprite.png" id="8_7rrb2"]
 [ext_resource type="Texture2D" uid="uid://bp38585vqlwt7" path="res://Sprites/Text Bubble2.png" id="10_8p68n"]
 [ext_resource type="PackedScene" uid="uid://d0wjm7is1wwbd" path="res://Door.tscn" id="10_mix1n"]
+[ext_resource type="AudioStream" uid="uid://bks4ef3myrm66" path="res://Sounds/vodevil-15550.mp3" id="13_mu4bu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bjnv8"]
 size = Vector2(40, 23)
@@ -372,6 +373,10 @@ position = Vector2(-345, 532)
 
 [node name="DoorNode" parent="." instance=ExtResource("10_mix1n")]
 position = Vector2(800, 462)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_mu4bu")
+autoplay = true
 
 [connection signal="timeout" from="CharacterBody2D/Camera2D/TextureProgressBar/Timer" to="CharacterBody2D/Camera2D/TextureProgressBar" method="_on_timer_timeout"]
 [connection signal="body_entered" from="FirstBanana" to="CharacterBody2D/Camera2D/TextureProgressBar" method="_on_area_2d_body_entered"]
